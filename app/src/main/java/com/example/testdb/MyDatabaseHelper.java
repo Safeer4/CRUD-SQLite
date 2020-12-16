@@ -3,6 +3,9 @@ package com.example.testdb;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 //We create a class MyDatabaseHelper and extends a parent class SQLiteOpenHelper (pre-defined class) to it
 //We must also implement the two methods of the parent class
@@ -18,9 +21,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     //the two columns. First is StudentID, which will be integer, auto increment and will be primary key
     //And the second column will be StudentName which will have text data
     private static final String SQL_CREATE_STUDENT_TABLE =
-            "CREATE TABLE Student" +
-            " (StudentID INTEGER PRIMARY KEY AUTOINCREMENT," +
-            " StudentName TEXT)";
+            "CREATE TABLE Student (StudentID INTEGER PRIMARY KEY AUTOINCREMENT, StudentName TEXT)";
 
     //This is the constructor of the class
     public MyDatabaseHelper(Context context)
@@ -34,6 +35,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
         //execSQL() method executes our query and will create the table
         db.execSQL(SQL_CREATE_STUDENT_TABLE);
+
     }
 
     @Override

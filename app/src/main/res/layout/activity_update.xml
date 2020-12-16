@@ -4,28 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Update">
 
     <EditText
+        android:id="@+id/currentName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
-        android:id="@+id/checkId"
+        android:hint="Current Name"
         />
 
-    <Button
+    <EditText
+        android:id="@+id/newName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add"
-        android:onClick="create"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Read"
-        android:onClick="read"
+        android:hint="New Name"
         />
 
     <Button
@@ -38,22 +31,8 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Delete"
-        android:onClick="delete"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Delete All"
-        android:onClick="deleteAll"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Check"
-        android:onClick="checkLogin"
+        android:text="Home"
+        android:onClick="home"
         />
 
 </LinearLayout>
